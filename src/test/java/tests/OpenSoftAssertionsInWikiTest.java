@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class OpenSoftAssertionsInWikiTest {
-    String JUnit5CodeExample = "@ExtendWith({SoftAssertsExtension.class})\n" +
+    String jUnit5CodeExample = "@ExtendWith({SoftAssertsExtension.class})\n" +
             "class Tests {\n" +
             "  @Test\n" +
             "  void test() {\n" +
@@ -25,6 +25,6 @@ public class OpenSoftAssertionsInWikiTest {
         $("#wiki-tab").click();
         $("#js-repo-pjax-container").shouldHave(text("Soft assertions"));
         $("#wiki-body").$(byText("Soft assertions")).click();
-        $("#repo-content-pjax-container").shouldHave(text(JUnit5CodeExample));
+        $("#repo-content-pjax-container").shouldHave(text(jUnit5CodeExample));
     }
 }
