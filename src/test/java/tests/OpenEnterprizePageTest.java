@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.*;
 public class OpenEnterprizePageTest {
     @Test
     void openEnterprizePage(){
-        Configuration.holdBrowserOpen = true;
         open("https://github.com/");
         $(".HeaderMenu-nav")
                 .$$("ul li").findBy(text("Solutions")).hover();
